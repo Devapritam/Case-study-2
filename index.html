@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <center>
+        <div class="col-xs-12 heading" id="top">
+            <h2>
+                Case &nbsp;<span>Study</span>
+                <img src="logo.jpg">
+            </h2>
+            <hr>
+        </div>
+
+        <button type="button" class="topBtn"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+        <div class="no1">
+            <b>1. Test Image - </b>
+            <img src="https://pngimg.com/uploads/water_bottle/water_bottle_PNG98959.png">
+            <br>
+            <h4>Prediction of Microsoft Azure - <span id="microsoftPrediction">Bottle</span></h4>
+            <h4>Prediction of MobileNet Model - <span id="mobilenetPrediction"></span></h4>
+            <br>
+
+            <div class="resultDiv">
+                <h4>Result - </h4>
+                <hr>
+                <label id="summaryPrediction"></label>
+            </div>
+        </div>
+
+        <div class="no2">
+            <b>2. Test Image - </b>
+            <img
+                src="https://www.bigbasket.com/media/uploads/p/xxl/40180899_4-nanonine-lunch-boxtiffin-set-stainless-steel-airtight-with-chapati-box-bag.jpg">
+            <br>
+            <h4>Prediction of Microsoft Azure - <span id="microsoftPrediction">indoor, cellphone</span></h4>
+            <h4>Prediction of MobileNet Model - <span id="mobilenetPrediction"></span></h4>
+            <br>
+
+            <div class="resultDiv">
+                <h4>Result - </h4>
+                <hr>
+                <label id="summaryPrediction2"></label>
+            </div>
+        </div>
+
+        <div class="no3">
+            <b>3. Test Image - </b>
+            <img
+                src="https://rukminim1.flixcart.com/image/714/857/apparels-combo/q/n/2/999yellow-johns-moody-original-imaeh24mzvfhhzhy.jpeg?q=50">
+            <br>
+            <h4>Prediction of Microsoft Azure - <span id="microsoftPrediction">Footwear</span></h4>
+            <h4>Prediction of MobileNet Model - <span id="mobilenetPrediction"></span></h4>
+            <br>
+
+            <div class="resultDiv">
+                <h4>Result - </h4>
+                <hr>
+                <label id="summaryPrediction2"></label>
+            </div>
+        </div>
+
+        <div class="no4">
+            <b>4. Test Image - </b>
+            <img src="https://tiimg.tistatic.com/fp/1/006/509/mr102-hd-printed-men-s-t-shirt-738.jpg?tr=n-w341">
+            <br>
+            <h4>Prediction of Microsoft Azure - <span id="microsoftPrediction">Shirt</span></h4>
+            <h4>Prediction of MobileNet Model - <span id="mobilenetPrediction"></span></h4>
+            <br>
+
+            <div class="resultDiv">
+                <h4>Result - </h4>
+                <hr>
+                <label id="summaryPrediction2"></label>
+            </div>
+        </div>
+
+        <div class="no5">
+            <b>3. Test Image - </b>
+            <img
+                src="https://ii1.pepperfry.com/media/catalog/product/e/z/568x625/ezy-plush-plush-comfort-premium-hd-pu-foam-king-bed-81x66x5--inches-mattress-by-cloude-ezy-plush-plu-eqavg1.jpg">
+            <br>
+            <h4>Prediction of Microsoft Azure - <span id="microsoftPrediction">Bed</span></h4>
+            <h4>Prediction of MobileNet Model - <span id="mobilenetPrediction"></span></h4>
+            <br>
+
+            <div class="resultDiv">
+                <h4>Result - </h4>
+                <hr>
+                <label id="summaryPrediction2"></label>
+            </div>
+        </div>
+
+        <div class="summary">
+            <p class="f1L">I have tested 5 images <br> <span></span> has predicted <span></span> of them
+                correctly and <span></span> has predicted <span></span> of them correctly. <br>So
+                according to me, <span></span> is more accurate</p>
+        </div>
+
+        <footer class="footer">
+            Copyright &copy; - Devapritam Sharma
+        </footer>
+
+        <br><br><br><br>
+
+
+    </center>
+</body>
+<script src="main.js" type="text/javascript" defer></script>
+
+<script defer>
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector(".heading");
+        const topBtn = document.querySelector(".topBtn");
+        header.classList.toggle("sticky", window.scrollY > 0);
+        topBtn.classList.toggle('active', window.scrollY > 0);
+
+        topBtn.addEventListener('click', () => {
+            window.scrollTo(0, 0);
+        });
+    });
+</script>
+
+</html>
